@@ -1,0 +1,6 @@
+/.env
+/.env.*
+/judge_simulator.py
+/__pycache__/
+*.py[cod]
+/expanded/
