@@ -29,7 +29,7 @@ python dataset/generate_dataset.py --seed-dir ./dataset --out ./expanded
 python generate_submission.py --dataset ./expanded --output ./submission.jsonl
 ```
 
-No API key or environment variable is required by the bot. Optional metadata variables: `TEAM_NAME`, comma-separated `TEAM_MEMBERS`, `CONTACT_EMAIL`, and `SUBMITTED_AT`. The Render Blueprint is `render.yaml`; connect a private GitHub repository containing the app files to Render and create a Blueprint deployment. `judge_simulator.py` is excluded from Git because it contains a local scorer key; the cloud app does not need it. Use one application instance and do not use multiple workers with the in-memory state implementation. The service uses HTTPS at its Render URL and `/v1/healthz` as its health check. A provider account and authenticated repository connection are required to create the public URL.
+No API key or environment variable is required by the bot. Optional metadata variables: `TEAM_NAME`, comma-separated `TEAM_MEMBERS`, `CONTACT_EMAIL`, and `SUBMITTED_AT`. The Render Blueprint is `render.yaml`; connect this GitHub repository to Render using its GitHub integration and create a Blueprint deployment. This repository is public, so keep credentials out of committed files. `judge_simulator.py` is excluded from Git because it contains a local scorer key; the cloud app does not need it. Use one application instance and do not use multiple workers with the in-memory state implementation. The service uses HTTPS at its Render URL and `/v1/healthz` as its health check. A provider account and authenticated repository connection are required to create the public URL.
 
 ## Tradeoffs
 
